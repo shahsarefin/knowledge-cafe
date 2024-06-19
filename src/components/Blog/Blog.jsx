@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { BsBookmarks } from "react-icons/bs";
 
-const Blog = ({ blog, handleAddToBookmark }) => {
+const Blog = ({ blog, handleAddToBookmark, handleMarkAsRead }) => {
     console.log(blog);
     const { title, cover, reading_time, author, author_img, posted_date, hashtags } = blog;
     return (
@@ -26,6 +26,7 @@ const Blog = ({ blog, handleAddToBookmark }) => {
                     hashtags.map((hash, idx) => <span key={idx}> <a href="">#{hash}</a></span>)
                 }
             </p>
+            <button onClick={() => handleMarkAsRead(reading_time)} className="bg-blue-500 text-white p-2 rounded">Mark as read</button>
         </div>
     );
 };
