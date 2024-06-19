@@ -15,7 +15,6 @@ const Blogs = ({ handleAddToBookmark }) => {
 
     return (
         <div className='md:w-2/3'>
-            <h2>Blogs Section</h2>
             {
                 blogs.map(blog => <Blog blog={blog} key={blog.id} handleAddToBookmark={handleAddToBookmark}></Blog>)
             }
